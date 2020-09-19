@@ -1,6 +1,8 @@
 # DaisySTM32CubeIdeDemo
 
-How to create an STM32CubeIde project for Daisy. Example is for Mac OS, but Windows and Linux should be similar.
+## Creating a project from Scratch
+
+How to create an STM32CubeIde project for Daisy. This example is for Mac OS, but Windows and Linux should be similar. STM32CubeIde is a free Eclipse based IDE supported by ST, and runs on all three major desktop platforms.
 
 First, you'll need to get the Daisy project code from GitHub. I just used the DaisyExamples repo that I found there. Before you create the project, you will have to build the libraries libDaisy and DaisySP, so they can be included in the project. There are makefiles for that.
 
@@ -50,6 +52,34 @@ When you are all done, the various paths and libaries will look something like t
 Now all we need to do is copy the contents of the example main file (Blink.cpp) into our project. There are many ways to do this, but the way I did this was to first rename the main.c file created by the wizard to main.cpp so that it will be compiled as a c++ file, and then I just copied the contents of Blink.cpp into main.cpp, replacing the original contents.
 
 At this point I was able to build the project without errors
+
+## Copy and modify existing project
+
+Most of the DaisyExamples are pretty similar, using two support libraries and the same include folders. So you can probably just copy the project here and modify it to your tastes, but it is good to understand the material in the previous section. To import a project, from the Project Explorer select Import Existing Project:
+
+<img src="Screenshots/Import.png" width="500">
+
+Select Next and then the Browse button, browse to the DaisyBlink folder. When you select it you'll see the project:
+
+<img src="Screenshots/FindProject.png" width="500">
+
+Select the project and press the Finish button. That should be it.
+
+## Debugging
+
+First, you'll need an adapter cable for the mini Jtag connector to STLINK-V2, and an STLINK-V2. The STLINK-V3 works too I'm sure, and the STLINK-V3MINI looks like it doesn't even need the adapter. But I have an STLINK-V2 just lying around, so that's what I'm using. If you are starting from scratch, the STLINK-V3MINI is also cheaper.
+
+Here's the [adapter](https://www.mouser.com/ProductDetail/Olimex-Ltd/ARM-JTAG-20-10?qs=DUTFWDROaMbVQp3WoAdijQ%3D%3D&gclid=EAIaIQobChMIyKDykavq6wIVZz6tBh2png01EAQYASABEgJ8VfD_BwE), and here's the [STLINK-V3MINI](https://www.mouser.com/datasheet/2/389/stlink-v3mini-1634136.pdf)
+
+My setup looks like this:
+
+<img src="Screenshots/DebugSetup.jpeg" width="500">
+
+Once you built the project, if you just select Run->Debug from the menu, or click on the bug icon in the toolbar, it will create a debug configuration for you and open the Debug Configurations dialog box. You can use the Debug Configuration feature to customize things latery, but you man not need to.Just use all the defaults for now. Click Debug, it should "just work" and take you to a breakpoint if automatically inserts at the beginning of main().
+
+Of course, various errors can occur if you don't have the HW hooked up right, and I think that on Windows you need to install a driver for the STLINK, but that's about it. You should be off and running.
+
+
 
 
 
