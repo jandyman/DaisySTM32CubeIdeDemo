@@ -61,7 +61,7 @@ Most of the DaisyExamples are pretty similar, using two support libraries and th
 
 Select Next and then the Browse button, browse to the DaisyBlink folder. When you select it you'll see the project:
 
-<img src="Screenshots/FindProject.png" width="500">
+<img src="Screenshots/FindProject.jpeg" width="500">
 
 Select the project and press the Finish button. That should be it.
 
