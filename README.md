@@ -75,7 +75,7 @@ My setup looks like this:
 
 <img src="Screenshots/DebugSetup.jpeg" width="500">
 
-Once you built the project, if you just select Run->Debug from the menu, or click on the bug icon in the toolbar, it will create a debug configuration for you and open the Debug Configurations dialog box. You can use the Debug Configuration feature to customize things latery, but you man not need to.Just use all the defaults for now. Click Debug, it should "just work" and take you to a breakpoint if automatically inserts at the beginning of main().
+Once you built the project, if you just select Run->Debug from the menu, or click on the bug icon in the toolbar, it will create a debug configuration for you and open the Debug Configurations dialog box. You can use the Debug Configuration feature to customize things later, but you may not need to.Just use all the defaults for now. Click Debug, it should "just work" and take you to a breakpoint if automatically inserts at the beginning of main().
 
 Of course, various errors can occur if you don't have the HW hooked up right, and I think that on Windows you need to install a driver for the STLINK, but that's about it. You should be off and running.
 
