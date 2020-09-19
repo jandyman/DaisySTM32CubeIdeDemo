@@ -63,7 +63,9 @@ Select Next and then the Browse button, browse to the DaisyBlink folder. When yo
 
 <img src="Screenshots/FindProject.jpeg" width="500">
 
-Select the project and press the Finish button. That should be it.
+Select the project and press the Finish button. 
+
+Now you need to make sure to set the DAISY environment variable to point to your DaisyExamples folder, so that all the include folder and library paths resolve correctly (See section above). After that it should build.
 
 ## Debugging
 
